@@ -33,9 +33,12 @@ export default function ContadorDeVotos() {
 }
 
 const styles = {
-  container: 'flex min-h-screen justify-center items-center border border-red-300 bg-gray-100',
-  cartao: 'w-sm rounded-lg border border-gray-300 bg-white p-4 shadow-md flex flex-col',
+  container: `flex min-h-screen justify-center items-center 
+              bg-gray-100`,
+  cartao: `w-sm rounded-lg border border-gray-300 bg-white 
+           p-4 shadow-md flex flex-col`,
   titulo: 'text-xl font-semibold text-gray-800',
   mensagem: 'mt-2 text-gray-600',
-  botao: 'mt-4 rounded-md bg-blue-600 px-4 py-2 text-white transition hover:bg-blue-700 self-end ml-auto'
+  botao: `mt-4 rounded-md bg-blue-600 px-4 py-2 text-white 
+          transition hover:bg-blue-700 self-end`
 };
