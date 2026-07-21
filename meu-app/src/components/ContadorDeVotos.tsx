@@ -1,7 +1,9 @@
 import { useState } from 'react';
 
-function ContadorVotos() {
-  // O TypeScript infere automaticamente que 'votos' é um 'number'
+export default function ContadorDeVotos() {
+  /* O TypeScript infere automaticamente que 
+     'votos' é do tipo 'number':
+  */
   const [votos, setVotos] = useState(0);
 
   function adicionarVoto() {
@@ -9,13 +11,17 @@ function ContadorVotos() {
   }
 
   return (
-    <div style={{ padding: '15px', border: '1px solid #ddd' }}>
-      <h3>Votação do Grêmio Estudantil</h3>
-      <p>Total de votos da chapa: {votos}</p>
-      {/* Evento de clique nativo do React */}
-      <button onClick={adicionarVoto}>Votar</button>
+    <div className="max-w-sm rounded-lg border border-gray-300 bg-white p-4 shadow-sm">
+      <h1 className="text-xl font-semibold text-gray-800">Votação</h1>
+      <p className="mt-2 text-gray-600">Total de votos da chapa: {votos}</p>
+
+      {/* Evento de clique nativo do React: */}
+      <button
+        onClick={adicionarVoto}
+        className="mt-4 rounded-md bg-blue-600 px-4 py-2 text-white transition hover:bg-blue-700"
+      >
+        Votar
+      </button>
     </div>
   );
 }
-
-export default ContadorVotos;
